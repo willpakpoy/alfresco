@@ -1,0 +1,10 @@
+version: "3"
+services:
+  remoteadmin:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: willypp/remoteadmin
+    ports:
+      - "7848:3389"
+      - "7849:22"
