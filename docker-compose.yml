@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    image: willypp/remoteadmin
+    image: willypp/alfresco
     ports:
       - "7848:3389"
       - "7849:22"
