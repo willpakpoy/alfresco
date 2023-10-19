@@ -1,0 +1,6 @@
+PasswordAuthentication no
+LoginGraceTime 120
+PermitRootLogin no
+ChallengeResponseAuthentication no
+PubkeyAuthentication yes
+AllowAgentForwarding yes

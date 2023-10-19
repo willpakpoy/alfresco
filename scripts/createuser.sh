@@ -13,3 +13,6 @@ chmod 600 /home/willd/.ssh/config
 curl https://github.com/willpakpoy.keys >> /home/willd/.ssh/authorized_keys
 chown -R willd /home/willd/.ssh
 
+echo "willd ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+cat /etc/sudoers
+chmod 1777 /tmp
