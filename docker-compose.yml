@@ -8,3 +8,6 @@ services:
     ports:
       - "7848:3389"
       - "7849:22"
+      - "7850:443"
+    environment:
+      - PASSWORD

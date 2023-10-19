@@ -4,7 +4,7 @@
 # apt -qq install -y supervisor xfce4 xfce4-terminal
 # apt -qq purge -y pm-utils xscreensaver*
 
-apt install lxde-core -y -qq
+apt install lxde -y -qq
 apt install supervisor -y -qq
 
 echo "Downloading KasmVNC"

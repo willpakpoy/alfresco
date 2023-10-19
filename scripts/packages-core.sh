@@ -10,3 +10,4 @@ apt-get -qq upgrade -y
 
 echo "Installing core packages"
 apt -qq install -y net-tools nano wget git-all curl sudo whois snap
+apt -qq remove -y xscreensaver

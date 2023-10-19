@@ -23,11 +23,10 @@ COPY --chmod=0755 ./scripts/ssh.sh .
 RUN ./ssh.sh
 
 COPY --chmod=0755 ./scripts/createuser.sh .
-RUN ./createuser.sh
+# RUN ./createuser.sh
 
 
-COPY supervisord.conf /etc/supervisor/supervisord.conf
+COPY extras /
 
-EXPOSE 3389 22
-
-CMD ["/usr/bin/supervisord"]
+EXPOSE 3389 22 443
+ENTRYPOINT ["/tmp/alfresco/docker-entrypoint.sh"]
