@@ -26,4 +26,12 @@ apt install ./gitkraken-amd64.deb -y -qq
 wget https://www.termius.com/download/linux/Termius.deb
 apt install ./Termius.deb -y -qq
 
+# Install JB Toolbox
+mkdir -p /opt/toolbox
+wget https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.0.4.17212.tar.gz
+tar -zxvf jetbrains* -C /opt/toolbox
+
+# Install rclone
+curl https://rclone.org/install.sh | /bin/bash
+
 sudo apt-get install -f -y -qq
