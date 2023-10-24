@@ -8,6 +8,11 @@ services:
     ports:
       - "7848:3389"
       - "7849:22"
-      - "7850:443"
+      - "7850:8444"
     environment:
       - PASSWORD
+      - TZ
+    volumes:
+      - ~/ccalfresco2:/home/willd
+    env_file:
+      - .env

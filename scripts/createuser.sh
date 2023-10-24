@@ -16,3 +16,12 @@ chown -R willd /home/willd/.ssh
 echo "willd ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 cat /etc/sudoers
 chmod 1777 /tmp
+
+su willd '/tmp/alfresco/software-development-environment.sh'
+usermod -a -G fuse willd
+
+# stuff for kasmvnc
+usermod -a -G ssl-cert willd
+vncpasswd -u willd -w -r
+
+echo "user environment successfully setup. starting supervisord"
