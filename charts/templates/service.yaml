@@ -15,3 +15,7 @@ spec:
       protocol: TCP
       port: 22
       targetPort: 22
+    - name: kasmvnc
+      protocol: TCP
+      port: 8444
+      targetPort: 8444

@@ -3,7 +3,7 @@ kind: StatefulSet
 metadata:
   name: {{ .Release.Name }}
 spec:
-  serviceName: {{ .Release.Name }}
+  serviceName: {{ .Release.Name }}-lb
   replicas: 1
   selector:
     matchLabels:
@@ -21,6 +21,8 @@ spec:
           name: rdp
         - containerPort: 22
           name: ssh
+        - containerPort: 8444
+          name: kasmvnc
         env:
         - name: PASSWORD
           valueFrom:
