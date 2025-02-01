@@ -12,7 +12,7 @@
     "target": {
       "app": {
         "context": ".",
-        "dockerfile": "./docker/Dockerfile",
+        "dockerfile": "./Dockerfile",
         "tags": ["ghcr.io/willpakpoy/alfresco:${TAG}", "ghcr.io/willpakpoy/alfresco"]
       }
     }

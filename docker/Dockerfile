@@ -31,7 +31,7 @@ COPY --chmod=0755 ./scripts/software-development-environment.sh .
 # RUN ./createuser.sh
 
 
-COPY ./extras /
+COPY extras /
 
 EXPOSE 3389 22 443 8444
 ENTRYPOINT ["/tmp/alfresco/docker-entrypoint.sh"]

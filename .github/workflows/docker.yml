@@ -23,4 +23,5 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
         continue-on-error: true
       - name: build and publish
+        working-directory: ./docker
         run: TAG=${{ github.sha }} docker buildx bake app --push
