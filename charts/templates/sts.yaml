@@ -25,7 +25,7 @@ spec:
           mountPath: /home/willd
   volumeClaimTemplates:
   - metadata:
-      name: pgdata
+      name: home
     spec:
       storageClassName: longhorn
       accessModes: [ "ReadWriteOnce" ]
