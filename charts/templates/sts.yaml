@@ -27,7 +27,7 @@ spec:
   - metadata:
       name: home
     spec:
-      storageClassName: longhorn
+      storageClassName: nfs
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
