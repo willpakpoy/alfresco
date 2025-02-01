@@ -1,0 +1,26 @@
+name: Container build
+on: [push, release]
+jobs:
+  build:
+    env:
+      TAG: ${{ github.sha }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      attestations: write
+      id-token: write
+    steps:
+      - name: clone our code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Log in to the Container registry
+        uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
+      - name: build and publish
+        run: TAG=${{ github.sha }} docker buildx bake app --push

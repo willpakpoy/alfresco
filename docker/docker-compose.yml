@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    image: willypp/alfresco
+    image: radfordhmdt.azurecr.io/alfresco-emergency-lol
     ports:
       - "7848:3389"
       - "7849:22"
@@ -13,6 +13,6 @@ services:
       - PASSWORD
       - TZ
     volumes:
-      - ~/ccalfresco2:/home/willd
+      - ~/ccalfresco23:/home/willd
     env_file:
       - .env

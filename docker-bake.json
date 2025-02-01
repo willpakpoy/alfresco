@@ -1,0 +1,19 @@
+{
+    "variable": {
+      "TAG": {
+        "default": "latest"
+      }
+    },
+    "group": {
+      "default": {
+        "targets": ["app"]
+      }
+    },
+    "target": {
+      "app": {
+        "context": ".",
+        "dockerfile": "./docker/Dockerfile",
+        "tags": ["ghcr.io/willpakpoy/alfresco:${TAG}", "ghcr.io/willpakpoy/alfresco"]
+      }
+    }
+  }
