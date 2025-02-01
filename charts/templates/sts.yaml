@@ -16,10 +16,17 @@ spec:
       containers:
       - name: webtop
         image: ghcr.io/willpakpoy/alfresco
-        # set the pgdata to /pgdata
         ports:
-        - containerPort: 5432
-          name: postgres
+        - containerPort: 3389
+          name: rdp
+        - containerPort: 22
+          name: ssh
+        env:
+        - name: PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Release.Name }}-secret
+              key: PASSWORD
         volumeMounts:
         - name: home
           mountPath: /home/willd
