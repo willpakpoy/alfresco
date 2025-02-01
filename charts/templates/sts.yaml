@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: webtop
-        image: ghcr.io/willpakpoy/alfresco:{{ .Values.imageTag }}"
+        image: ghcr.io/willpakpoy/alfresco
         # set the pgdata to /pgdata
         ports:
         - containerPort: 5432
